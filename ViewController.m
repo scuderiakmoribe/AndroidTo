@@ -115,6 +115,7 @@
     l.password_ = @"test";
     
     BasicHttpBinding_IBTServiceBindingResponse *response = [s LoginUsingParameters:l];
+//    BasicHttpBinding_IBTServiceBindingResponse *response = [s LoginAsyncUsingParameters:l delegate:<#(id<BasicHttpBinding_IBTServiceBindingResponseDelegate>)#>;
 
     NSLog(@"res:%@",response);
     
@@ -127,6 +128,7 @@
     e.actionCode_ = [NSNumber numberWithInt: 5];
     
     BasicHttpBinding_IBTServiceBindingResponse *response1 = [s EntryActionUsingParameters: e];
+    
     NSLog(@"res1:%@",response1);
     
     //GetUserStatus => error in dateWithString
