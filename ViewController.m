@@ -127,7 +127,7 @@
     e.actionCode_ = [NSNumber numberWithInt: 5];
     
     BasicHttpBinding_IBTServiceBindingResponse *response1 = [s EntryActionUsingParameters: e];
-    NSLog(@"res:%@",response1);
+    NSLog(@"res1:%@",response1);
     
     //GetUserStatus => error in dateWithString
     BTService_GetUserStatus *u = [[BTService_GetUserStatus alloc] init];
@@ -136,7 +136,7 @@
     u.loginUser_ = um1;
     
     BasicHttpBinding_IBTServiceBindingResponse *response2 = [s GetUserStatusUsingParameters: u];
-    NSLog(@"res:%@",response2);
+    NSLog(@"res2:%@",response2);
     
     //GetNameMaster
     BTService_GetNameMaster *namemaster = [[BTService_GetNameMaster alloc] init];
@@ -146,13 +146,11 @@
     NSLog(@"res3:%@",response3);
     
     //GetActionData => error in dateWithString
-//    BTService_GetActionData *actiondata = [[BTService_GetActionData alloc] init];
-////    tns2_UserMaster *um2 = [[tns2_UserMaster alloc] init];
-////    um2.UserNo =[NSNumber numberWithInt: 8];
-//    actiondata.userNo_ = [NSNumber numberWithInt: 8];
-//    
-//    BasicHttpBinding_IBTServiceBindingResponse *response4 = [s GetActionDataUsingParameters:actiondata];
-//    NSLog(@"res4:%@",response4);
+    BTService_GetActionData *actiondata = [[BTService_GetActionData alloc] init];
+    actiondata.userNo_ = [NSNumber numberWithInt: 8];
+    
+    BasicHttpBinding_IBTServiceBindingResponse *response4 = [s GetActionDataUsingParameters:actiondata];
+    NSLog(@"res4:%@",response4);
     
     //GetActionDetail
     BTService_GetActionDetail *actiondetail = [[BTService_GetActionDetail alloc] init];
@@ -169,10 +167,10 @@
     NSLog(@"res6:%@",response6);
     
     //GetLastLosterData => error in dateWithString
-//    BTService_GetLastLosterData *lastlost = [[BTService_GetLastLosterData alloc] init];
-//    lastlost.userNo_ = [NSNumber numberWithInt: 8];
-//    BasicHttpBinding_IBTServiceBindingResponse *response7 = [s GetLastLosterDataUsingParameters:lastlost];
-//    NSLog(@"res7:%@",response7);
+    BTService_GetLastLosterData *lastlost = [[BTService_GetLastLosterData alloc] init];
+    lastlost.userNo_ = [NSNumber numberWithInt: 8];
+    BasicHttpBinding_IBTServiceBindingResponse *response7 = [s GetLastLosterDataUsingParameters:lastlost];
+    NSLog(@"res7:%@",response7);
     
     //GetLosterData
     BTService_GetLosterData *lost = [[BTService_GetLosterData alloc] init];
